@@ -13,25 +13,11 @@
                 	<div class="col-lg-12">
                 		<div class="panel panel-green">
                 			<div class="panel-heading">
-                				Form kriteria Penerima bantuan
+                				Form subkriteria Penerima bantuan
                 			</div>
                 			<div class="panel-body">
-                				<form action="config/kriteria/proses_simpan.php" method="post">
-                					<?php include 'halaman/kriteria/form.php'; ?>
-                                    <div class="row form-group">
-                                        <div class="col-lg-3">
-                                            <label>SubKriteria</label>
-                                        </div>
-                                        <div class="col-lg-9">
-                                            <select class="form-control" name="subkriteria"id="add_sub">
-                                                <option value="">- Sub Kriteria -</option>
-                                                <option value="Tidak Ada">Tidak Ada</option>
-                                                <option value="Punya">Punya</option>
-                                              
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div id="sub"></div>
+                				<form action="config/subkriteria/proses_simpan.php" method="post">
+                					<?php include 'halaman/subkriteria/form.php'; ?>
 
                 					<div class="form-group">
 										<div class="col-lg-12">

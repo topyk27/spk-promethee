@@ -17,8 +17,8 @@
                 			</div>
                 			<div class="panel-body">
                 				<form action="config/calon/proses_simpan.php" method="post">
-                					<?php include 'halaman/calon/form.php'; ?>
-                                        
+                                    <?php include 'halaman/calon/form.php'; ?>
+
                 					<div class="form-group">
 										<div class="col-lg-12">
 											<button type="submit" class="btn btn-md btn-success"><i class="fa fa-save"></i> Simpan</button>

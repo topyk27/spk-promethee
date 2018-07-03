@@ -25,7 +25,7 @@
                                             <th>Nama</th>
                                             <th>Bobot</th>
                                             <th>Jenis</th>
-                                            <th>SubKriteria</th>
+                                            <th>SubKriteria (Bobot)</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -37,8 +37,12 @@
                                             <td><?php echo $data[0]['bobot']; ?></td>
                                             <td><?php echo $data[0]['jenis']; ?></td>
                                             <td>
-                                                <?php foreach($data as $data_sub): ?>    
-                                                <?php echo $data_sub['nama_subkriteria'].' ('.$data_sub['bobot_subkriteria'].')'; ?>
+                                                <?php foreach($data as $data_sub): ?>
+                                                <?php if ($data_sub['nama_subkriteria'] != 'input'): ?>
+                                                      <?php echo $data_sub['nama_subkriteria'].' ('.$data_sub['bobot_subkriteria'].')'; ?>  
+                                                <?php else: ?>
+                                                    -
+                                                <?php endif ?>    
                                                 <br> 
                                                 <?php   endforeach; ?>
                                             </td>

@@ -22,25 +22,22 @@
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>No KK</th>
+                                            <th width="50">No</th>
                                             <th>Nama</th>
                                             <th>Jenis Kelamin</th>
-                                            <th>Usia</th>
                                             <th>Kecamatan</th>
-                                            <th>Status Perkawina</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $x=1; ?>
                                     <?php if(isset($datas)): ?>
                                         <?php foreach($datas as $data): ?>
                                         <tr>
-                                            <td><?php echo $data['no_kk']; ?></td>
+                                            <td align="center"><?php echo $x++; ?></td>
                                             <td><?php echo $data['nama']; ?></td>
                                             <td><?php echo $data['jenis_kelamin']; ?></td>
-                                            <td><?php echo $data['usia']; ?></td>
                                             <td><?php echo $data['kecamatan']; ?></td>
-                                            <td><?php echo $data['status_perkawinan']; ?></td>
                                             
                                             <td align="center">
                                                 <a href="index.php?url=data_calon_lihat&id=<?php echo $data['id'] ?>" class="btn btn-xs btn-info" title="Lihat">

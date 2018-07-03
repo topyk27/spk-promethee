@@ -1,21 +1,23 @@
 <?php 
 include '../koneksi.php';
 
-$no_kk = $_POST['no_kk'];
 $nama = $_POST['nama'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
-$usia = $_POST['usia'];
 $kecamatan = $_POST['kecamatan'];
-$penghasilan = $_POST['penghasilan'];
-$status_perkawinan = $_POST['status_perkawinan'];
-$pendidikan = $_POST['pendidikan'];
-$jenis_kecacatan = $_POST['jenis_kecacatan'];
-$penyebab_kecacatan = $_POST['penyebab_kecacatan'];
+$sub_id = $_POST['sub_id'];
 
 
-$sql = "INSERT INTO calon VALUES(NULL,'$no_kk','$nama','$jenis_kelamin','$kecamatan',$usia,'$status_perkawinan','$pendidikan','$jenis_kecacatan','$penyebab_kecacatan')";
+$sql = "INSERT INTO calon VALUES(NULL,'$nama','$jenis_kelamin','$kecamatan')";
 
 if(mysqli_query($koneksi,$sql)){
+	$calon_id = $koneksi->insert_id;
+
+	foreach ($sub_id as $key => $value) {
+		$value = isset($_POST['value'][$key]) ? $_POST['value'][$key] : 0;
+
+		mysqli_query($koneksi,"INSERT INTO calon_subkriteria VALUES(NULL,'$calon_id','$sub_id[$key]','$value')");
+	}
+
 	$_SESSION['pesan'] = "Berhasil tambah data calon";
 }else{
 	$_SESSION['pesan'] = "Gagal tambah data calon";

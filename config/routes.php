@@ -21,9 +21,6 @@ if(isset($_GET['url'])){
 			require_once 'config/pengguna/load_detail.php';
 			include 'halaman/pengguna/ubah.php';
 			break;
-		case 'hasil_seleksi':
-			include 'halaman/hasil_seleksi.php';
-			break;
 		case 'pengaturan':
 			require_once 'config/pengguna/load_pengguna.php';
 			include 'halaman/pengguna/pengaturan.php';
@@ -44,13 +41,6 @@ if(isset($_GET['url'])){
 			require_once 'config/program_bantuan/load_detail.php';
 			include 'halaman/program_bantuan/ubah.php';
 			break;
-		case 'hasil_seleksi':
-			include 'halaman/hasil_seleksi.php';
-			break;
-		case 'pengaturan':
-			require_once 'config/program_bantuan/load_program_bantuan.php';
-			include 'halaman/program_bantuan/pengaturan.php';
-			break;
 
 		case 'data_calon':
 			require_once 'config/calon/load_data.php';
@@ -67,13 +57,6 @@ if(isset($_GET['url'])){
 			require_once 'config/calon/load_detail.php';
 			include 'halaman/calon/ubah.php';
 			break;
-		case 'hasil_seleksi':
-			include 'halaman/hasil_seleksi.php';
-			break;
-		case 'pengaturan':
-			require_once 'config/pengguna/load_pengguna.php';
-			include 'halaman/pengguna/pengaturan.php';
-			break;
 
 		case 'data_kriteria':
 			require_once 'config/kriteria/load_data.php';
@@ -89,6 +72,37 @@ if(isset($_GET['url'])){
 		case 'data_kriteria_ubah':
 			require_once 'config/kriteria/load_detail.php';
 			include 'halaman/kriteria/ubah.php';
+			break;
+
+		case 'data_subkriteria':
+			require_once 'config/subkriteria/load_data.php';
+			include 'halaman/subkriteria/index.php';
+			break;
+		case 'data_subkriteria_tambah':
+			include 'halaman/subkriteria/tambah.php';
+			break;
+		case 'data_subkriteria_lihat':
+			require_once 'config/subkriteria/load_detail.php';
+			include 'halaman/subkriteria/lihat.php';
+			break;
+		case 'data_subkriteria_ubah':
+			require_once 'config/subkriteria/load_detail.php';
+			include 'halaman/subkriteria/ubah.php';
+			break;
+
+		case 'proses_seleksi':
+			require_once 'config/koneksi.php';
+			require_once 'config/proses_seleksi/load_kriteria.php';
+			include 'halaman/seleksi/proses_seleksi.php';
+			break;
+
+		case 'hasil_seleksi':
+			require_once 'config/koneksi.php';
+			require_once 'config/proses_seleksi/load_kriteria.php';
+			require_once 'config/proses_seleksi/load_calon.php';
+			require_once 'config/pro/fungsi_preferensi.php';
+			require_once 'config/proses_seleksi/proses_seleksi.php';
+			include 'halaman/seleksi/hasil_seleksi.php';
 			break;
 
 		default:

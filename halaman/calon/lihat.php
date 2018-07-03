@@ -18,50 +18,28 @@
                 			<div class="panel-body">
                 				<table class="table">
                                     <tr>
-                                        <td>Nomor KK</td>            
-                                        <td>:</td>            
-                                        <td><?php echo $data_calon[0]['no_kk']; ?></td>            
-                                    </tr>
-                                    <tr>
                                         <td>Nama</td>            
                                         <td>:</td>            
-                                        <td><?php echo $data_calon[0]['nama']; ?></td>            
+                                        <td><?php echo $data_calon['nama']; ?></td>            
                                     </tr>
                                     <tr>
                                         <td>Jenis Kelamin</td>            
                                         <td>:</td>            
-                                        <td><?php echo $data_calon[0]['jenis_kelamin']; ?></td>            
+                                        <td><?php echo $data_calon['jenis_kelamin']; ?></td>            
                                     </tr>
                                     <tr>
                                         <td>Kecamatan</td>            
                                         <td>:</td>            
-                                        <td><?php echo $data_calon[0]['kecamatan']; ?></td>            
+                                        <td><?php echo $data_calon['kecamatan']; ?></td>            
                                     </tr>
-                                    <tr>
-                                        <td>Usia</td>            
-                                        <td>:</td>            
-                                        <td><?php echo $data_calon[0]['usia']; ?></td>            
-                                    </tr>
-                                    <tr>
-                                        <td>Status Perkawinan</td>            
-                                        <td>:</td>            
-                                        <td><?php echo $data_calon[0]['status_perkawinan']; ?></td>            
-                                    </tr>
-                                    <tr>
-                                        <td>Pendidikan</td>            
-                                        <td>:</td>            
-                                        <td><?php echo $data_calon[0]['pendidikan']; ?></td>            
-                                    </tr>
-                                    <tr>
-                                        <td>Jenis Kecacatan</td>            
-                                        <td>:</td>            
-                                        <td><?php echo $data_calon[0]['jenis_kecacatan']; ?></td>            
-                                    </tr>
-                                    <tr>
-                                        <td>Penyebab Kecacatan</td>            
-                                        <td>:</td>            
-                                        <td><?php echo $data_calon[0]['penyebab_kecacatan']; ?></td>            
-                                    </tr>
+                                    <?php foreach ($data_calon['kriteria'] as $key => $value): ?>
+                                        <tr>
+                                            <td><?php echo $key; ?></td>            
+                                            <td>:</td>            
+                                            <td><?php echo $value['value'] ?></td>            
+                                        </tr>
+                                    <?php endforeach ?>
+
                                 </table>
                 			</div>
                 		</div>

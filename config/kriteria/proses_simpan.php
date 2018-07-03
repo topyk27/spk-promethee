@@ -19,6 +19,8 @@ if(mysqli_query($koneksi,$sql)){
 		for ($i=0; $i < count($sub_nama); $i++) { 
 			mysqli_query($koneksi,"INSERT INTO subkriteria VALUES(NULL,'$kriteria_id','$sub_nama[$i]','$sub_bobot[$i]')");
 		}
+	}else{
+		mysqli_query($koneksi,"INSERT INTO subkriteria VALUES(NULL,'$kriteria_id','input','NULL')");
 	}
 	$_SESSION['pesan'] = "Berhasil tambah data kriteria";
 }else{

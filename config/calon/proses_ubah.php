@@ -1,21 +1,22 @@
 <?php 
 include '../koneksi.php';
 
-$id = $_GET['id'];
-$no_kk = $_POST['no_kk'];
+$id = $_POST['id'];
 $nama = $_POST['nama'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
 $kecamatan = $_POST['kecamatan'];
-$usia = $_POST['usia'];
-$status_perkawinan = $_POST['status_perkawinan'];
-$pendidikan = $_POST['pendidikan'];
-$jenis_kecacatan = $_POST['jenis_kecacatan'];
-$penyebab_kecacatan = $_POST['penyebab_kecacatan'];
+$sub_id = $_POST['sub_id'];
+$old_sub_id = $_POST['old_sub_id'];
 
-
-$sql = "UPDATE calon set no_kk='$no_kk', nama='$nama', jenis_kelamin='$jenis_kelamin', usia='$usia', kecamatan='$kecamatan', pendidikan='$pendidikan', status_perkawinan='$status_perkawinan', jenis_kecacatan='$jenis_kecacatan', penyebab_kecacatan='$penyebab_kecacatan' where id='$id'";
+$sql = "UPDATE calon set nama='$nama', jenis_kelamin='$jenis_kelamin', kecamatan='$kecamatan' where id='$id'";
 
 if(mysqli_query($koneksi,$sql)){
+	$x=0;
+	foreach ($sub_id as $key => $value) {
+		$value = isset($_POST['value'][$key]) ? $_POST['value'][$key] : 0;
+
+		mysqli_query($koneksi,"UPDATE calon_subkriteria set subkriteria_id='$sub_id[$key]', value='$value' WHERE id=".$old_sub_id[$x++]);
+	}
 	$_SESSION['pesan'] = "Berhasil tambah data calon";
 }else{
 	$_SESSION['pesan'] = "Gagal tambah data calon";

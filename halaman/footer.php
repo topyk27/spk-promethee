@@ -25,6 +25,19 @@
         $('#dataTables-example').DataTable({
                 responsive: true
         });
+        $('#dataTables-result').DataTable({
+                responsive: true,
+                order : []
+        });
+        $('#dataTables-ranking').DataTable({
+                responsive: true,
+                order : []
+        });
+        $('#dataTables-kecocokan').DataTable({
+                responsive: true,
+                order : []
+        });
+        
     });
     </script>
 <script>

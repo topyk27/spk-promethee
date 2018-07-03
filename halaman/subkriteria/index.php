@@ -1,7 +1,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Data kriteria Penerima Bantuan</h1>
+                    <h1 class="page-header">Data subkriteria Penerima Bantuan</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -11,8 +11,8 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading" style="padding-bottom: 20px">
                             <div>
-                                Tabel kriteria Penerima Bantuan
-                            <a href="index.php?url=data_kriteria_tambah" class="btn btn-sm btn-success" style="float: right;"><i class="fa fa-plus"></i> Tambah</a>
+                                Tabel subkriteria Penerima Bantuan
+                            <a href="index.php?url=data_subkriteria_tambah" class="btn btn-sm btn-success" style="float: right;"><i class="fa fa-plus"></i> Tambah</a>
                             
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                                             <th>Nama</th>
                                             <th>Bobot</th>
                                             <th>Jenis</th>
-                                            <th>SubKriteria</th>
+                                            <th>Subsubkriteria</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -38,19 +38,19 @@
                                             <td><?php echo $data[0]['jenis']; ?></td>
                                             <td>
                                                 <?php foreach($data as $data_sub): ?>    
-                                                <?php echo $data_sub['nama_subkriteria'].' ('.$data_sub['bobot_subkriteria'].')'; ?>
+                                                <?php echo $data_sub['nama_subsubkriteria'].' ('.$data_sub['bobot_subsubkriteria'].')'; ?>
                                                 <br> 
                                                 <?php   endforeach; ?>
                                             </td>
                                             
                                             <td align="center">
-                                                <a href="index.php?url=data_kriteria_lihat&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-info" title="Lihat">
+                                                <a href="index.php?url=data_subkriteria_lihat&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-info" title="Lihat">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
-                                                <a href="index.php?url=data_kriteria_ubah&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-warning" title="Ubah">
+                                                <a href="index.php?url=data_subkriteria_ubah&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-warning" title="Ubah">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
-                                                <a href="config/kriteria/proses_hapus.php?&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Apakah anda yakin ingin menghapus?')" >
+                                                <a href="config/subkriteria/proses_hapus.php?&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Apakah anda yakin ingin menghapus?')" >
                                                     <i class="fa fa-remove"></i>
                                                 </a>
                                             </td>

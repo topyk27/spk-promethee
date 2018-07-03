@@ -13,12 +13,13 @@
                 	<div class="col-lg-12">
                 		<div class="panel panel-yellow">
                 			<div class="panel-heading">
-                				Form kriteria Penerima bantuan
+                				Form subkriteria Penerima bantuan
                 			</div>
                 			<div class="panel-body">
-                				<form action="config/kriteria/proses_ubah.php?id=<?php echo $_GET['id'] ?>" method="post">
-                					<?php include 'halaman/kriteria/form.php'; ?>
-
+                				<form action="config/subkriteria/proses_ubah.php?id=<?php echo $_GET['id'] ?>" method="post">
+                					<?php include 'halaman/subkriteria/form.php'; ?>
+                                    <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
+                                    <input type="hidden" name="kriteria_id" value="<?php echo $_GET['kriteria_id'] ?>">
                 					<div class="form-group">
 										<div class="col-lg-12">
 											<button type="submit" class="btn btn-md btn-success"><i class="fa fa-save"></i> Simpan</button>

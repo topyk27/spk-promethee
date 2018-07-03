@@ -1,19 +1,13 @@
 <?php 
 include '../koneksi.php';
 
-$id = $_GET['id'];
-$no_kk = $_POST['no_kk'];
+$id = $_POST['id'];
 $nama = $_POST['nama'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
-$kecamatan = $_POST['kecamatan'];
-$usia = $_POST['usia'];
-$status_perkawinan = $_POST['status_perkawinan'];
-$pendidikan = $_POST['pendidikan'];
-$jenis_kecacatan = $_POST['jenis_kecacatan'];
-$penyebab_kecacatan = $_POST['penyebab_kecacatan'];
+$bobot = $_POST['bobot'];
+$jenis = $_POST['jenis'];
 
 
-$sql = "UPDATE kriteria set no_kk='$no_kk', nama='$nama', jenis_kelamin='$jenis_kelamin', usia='$usia', kecamatan='$kecamatan', pendidikan='$pendidikan', status_perkawinan='$status_perkawinan', jenis_kecacatan='$jenis_kecacatan', penyebab_kecacatan='$penyebab_kecacatan' where id='$id'";
+$sql = "UPDATE kriteria set bobot='$bobot', nama='$nama', jenis='$jenis' where id='$id'";
 
 if(mysqli_query($koneksi,$sql)){
 	$_SESSION['pesan'] = "Berhasil tambah data kriteria";

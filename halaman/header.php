@@ -35,7 +35,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style type="text/css">
+        .ctr > thead > tr > th {
+            text-align: center; vertical-align: middle;
+        }
+    </style>
 </head>
 
 <body>
@@ -81,13 +85,13 @@
                             <a href="index.php?url=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="index.php?url=data_calon"><i class="fa fa-table fa-fw"></i> Data Calon Penerima</a>
-                        </li>
-                        <li>
                             <a href="index.php?url=data_kriteria"><i class="fa fa-table fa-fw"></i> Data Kriteria</a>
                         </li>
                         <li>
-                            <a href="index.php?url=hasil_seleksi"><i class="fa fa-edit fa-fw"></i> Hasil Seleksi</a>
+                            <a href="index.php?url=data_calon"><i class="fa fa-table fa-fw"></i> Data Calon Penerima</a>
+                        </li>
+                        <li>
+                            <a href="index.php?url=proses_seleksi"><i class="fa fa-edit fa-fw"></i>Proses & Hasil Seleksi</a>
                         </li>
 
                         <li>

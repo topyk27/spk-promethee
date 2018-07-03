@@ -38,7 +38,7 @@
                                         </td>
                                         <td></td>
                                         <td>
-                                           <a href="index.php?url=data_subkriteria_tambah" class="btn btn-sm btn-success" style="float: right;">
+                                           <a href="index.php?url=data_subkriteria_tambah&id=<?php echo $data_kriteria[0]['id'] ?>" class="btn btn-sm btn-success" style="float: right;">
                                                 <i class="fa fa-plus"></i> Tambah
                                             </a> 
                                         </td>
@@ -60,10 +60,10 @@
                                                                 <td><?php echo $sub['nama_subkriteria']; ?></td>
                                                                 <td><?php echo $sub['bobot_subkriteria']; ?></td>
                                                                 <td>
-                                                                    <a href="index.php?url=data_subkriteria_ubah&id=<?php echo $sub['subkriteria_id'] ?>" class="btn btn-xs btn-warning" title="Ubah">
+                                                                    <a href="index.php?url=data_subkriteria_ubah&id=<?php echo $sub['subkriteria_id'] ?>&kriteria_id=<?php echo $data_kriteria[0]['id']?>" class="btn btn-xs btn-warning" title="Ubah">
                                                                         <i class="fa fa-pencil"></i>
                                                                     </a>
-                                                                    <a href="config/subkriteria/proses_hapus.php?&id=<?php echo $sub['subkriteria_id'] ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Apakah anda yakin ingin menghapus?')" >
+                                                                    <a href="config/subkriteria/proses_hapus.php?&id=<?php echo $sub['subkriteria_id'] ?>&kriteria_id=<?php echo $data_kriteria[0]['id']?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Apakah anda yakin ingin menghapus?')" >
                                                                         <i class="fa fa-remove"></i>
                                                                     </a>
                                                                 </td>
