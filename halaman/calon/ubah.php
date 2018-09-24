@@ -3,7 +3,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Tambah Data</h1>
+                        <h1 class="page-header">Ubah Data</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>

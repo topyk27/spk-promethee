@@ -18,7 +18,7 @@
                 			<div class="panel-body">
                 				<form action="config/subkriteria/proses_simpan.php" method="post">
                 					<?php include 'halaman/subkriteria/form.php'; ?>
-
+                                    <input type="hidden" name="kriteria_id" value="<?php echo $_GET['id'] ?>">
                 					<div class="form-group">
 										<div class="col-lg-12">
 											<button type="submit" class="btn btn-md btn-success"><i class="fa fa-save"></i> Simpan</button>

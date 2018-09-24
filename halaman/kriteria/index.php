@@ -12,8 +12,11 @@
                         <div class="panel-heading" style="padding-bottom: 20px">
                             <div>
                                 Tabel kriteria Penerima Bantuan
-                            <a href="index.php?url=data_kriteria_tambah" class="btn btn-sm btn-success" style="float: right;"><i class="fa fa-plus"></i> Tambah</a>
-                            
+                            <?php if ($_SESSION['level']=='superadmin'): ?>
+                                
+                            <a href="index.php?url=data_kriteria_tambah" class="btn btn-sm btn-success" style="float: right;"><i class="fa fa-plus"></i> Tambah
+                            </a>
+                            <?php endif ?>
                             </div>
                         </div>
                         <!-- /.panel-heading -->
@@ -51,12 +54,15 @@
                                                 <a href="index.php?url=data_kriteria_lihat&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-info" title="Lihat">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
+                                                <?php if ($_SESSION['level']=='superadmin'): ?>
+                                                    
                                                 <a href="index.php?url=data_kriteria_ubah&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-warning" title="Ubah">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
                                                 <a href="config/kriteria/proses_hapus.php?&id=<?php echo $data[0]['id'] ?>" class="btn btn-xs btn-danger" title="Hapus" onclick="return confirm('Apakah anda yakin ingin menghapus?')" >
                                                     <i class="fa fa-remove"></i>
                                                 </a>
+                                                <?php endif ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

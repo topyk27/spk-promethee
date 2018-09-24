@@ -49,8 +49,8 @@ for ($i=0; $i < count($data_calon['data']); $i++) {
 	}
 	$hasil['A'.($i+1)]['leaving']= array_sum($ranking['A'.($i+1)])/(count($data_calon['data'])-1);
 }
-
-for ($j=0; $j < count($data_calon['data']); $j++) { 
+$j = 0;
+foreach ($data_calon['data'] as $key => $value) {
 	$tmp_entering = 0;
 	for ($i=0; $i < count($data_calon['data']); $i++) { 
 		$tmp_entering += $ranking['A'.($i+1)][$j];
@@ -58,6 +58,11 @@ for ($j=0; $j < count($data_calon['data']); $j++) {
 	$hasil['A'.($j+1)]['entering'] = $tmp_entering/(count($data_calon['data'])-1);
 	$hasil['A'.($j+1)]['net_flow'] = $hasil['A'.($j+1)]['leaving']-$hasil['A'.($j+1)]['entering'];
 	$hasil['A'.($j+1)]['status'] = $hasil['A'.($j+1)]['net_flow'] < 0 ? 'Ditolak' : 'Diterima';
+	$hasil['A'.($j+1)]['nama'] = $value['nama'];
+	$j++;
 }
+// for ($j=0; $j < count($data_calon['data']); $j++) { 
+	
+// }
 // echo count($data_calon);
  ?>

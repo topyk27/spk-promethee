@@ -82,6 +82,7 @@
                                         <thead>
                                             <tr>
                                                 <th width="100">Alternatif</th>
+                                                <th>Nama</th>
                                                 <th>Leaving Flow</th>
                                                 <th>Entering Flow</th>
                                                 <th>Net Flow</th>
@@ -91,7 +92,8 @@
                                         <tbody>
                                             <?php foreach ($hasil as $key => $value): ?>
                                                 <tr>
-                                                    <td><?php echo $key ?> (<?php //echo $value['nama']; ?>)</td>
+                                                    <td><?php echo $key ?></td>
+                                                    <td><?php echo $value['nama']; ?></td>
                                                     <td><?php echo $value['leaving'] ?></td>
                                                     <td><?php echo $value['entering'] ?></td>
                                                     <td><?php echo $value['net_flow'] ?></td>

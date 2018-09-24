@@ -1,7 +1,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Data Pengguna</h1>
+                    <h1 class="page-header">Data Petugas</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -11,7 +11,7 @@
                     <div class="panel panel-warning">
                         <div class="panel-heading" style="padding-bottom: 20px">
                             <div>
-                                Tabel Pengguna
+                                Tabel Petugas
                             <a href="index.php?url=data_pengguna_tambah" class="btn btn-sm btn-success" style="float: right;"><i class="fa fa-plus"></i> Tambah</a>
                             
                             </div>
@@ -24,7 +24,6 @@
                                         <tr>
                                             <th>Nama</th>
                                             <th>Username</th>
-                                            <th>Level</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -33,9 +32,7 @@
                                         <?php foreach($datas as $data): ?>
                                         <tr>
                                             <td><?php echo $data['nama']; ?></td>
-                                            <td><?php echo $data['username']; ?></td>
-                                            <td><?php echo $data['level']; ?></td>
-                                            
+                                            <td><?php echo $data['username']; ?></td>  
                                             <td align="center">
                                                 <a href="index.php?url=data_pengguna_lihat&id=<?php echo $data['id'] ?>" class="btn btn-xs btn-info" title="Lihat">
                                                     <i class="fa fa-eye"></i>

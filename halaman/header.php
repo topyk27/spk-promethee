@@ -93,19 +93,17 @@
                         <li>
                             <a href="index.php?url=proses_seleksi"><i class="fa fa-edit fa-fw"></i>Proses & Hasil Seleksi</a>
                         </li>
-
+                        <?php if ($_SESSION['level']=='superadmin'): ?>
                         <li>
                             <a href="#"><i class="fa fa-gear"></i> Pengaturan<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <!-- <li>
-                                    <a href="index.php?url=data_program_bantuan">Jenis Program Bantuan</a>
-                                </li> -->
                                 <li>
-                                    <a href="index.php?url=data_pengguna">Pengguna</a>
+                                    <a href="index.php?url=data_pengguna">Petugas</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <?php endif ?>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

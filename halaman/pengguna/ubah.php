@@ -13,7 +13,7 @@
                 	<div class="col-lg-12">
                 		<div class="panel panel-yellow">
                 			<div class="panel-heading">
-                				Form Pengguna
+                				Form Petugas
                 			</div>
                 			<div class="panel-body">
                 				<form action="config/pengguna/proses_ubah.php?id=<?php echo $_GET['id'] ?>" method="post">

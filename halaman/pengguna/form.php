@@ -24,15 +24,4 @@
 		<input class="form-control" type="password" name="password" placeholder="Password" required="" >
 	</div>
 </div>
-
-<div class="form-group">
-	<div class="col-lg-3">
-		<label>Level</label>
-	</div>
-	<div class="col-lg-9">
-		<select name="level" class="form-control">
-			<option value="Admin" <?php if(isset($data_pengguna) && $data_pengguna[0]['level']=='Admin') echo "selected"; ?> >Admin</option>
-			<option value="Petugas" <?php if(isset($data_pengguna) && $data_pengguna[0]['level']=='Petugas') echo "selected"; ?>>Petugas</option>
-		</select>
-	</div>
-</div>
+<input type="hidden" name="level" value="Petugas">

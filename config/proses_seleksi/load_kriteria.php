@@ -1,6 +1,6 @@
 <?php 
 
-$hasil = mysqli_query($koneksi, "SELECT * FROM KRITERIA");
+$hasil = mysqli_query($koneksi, "SELECT distinct KRITERIA.* FROM KRITERIA");
 
 while ($data_row = mysqli_fetch_assoc($hasil)) {
 	$datas['data'][$data_row['nama']] = $data_row;
